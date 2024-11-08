@@ -3,12 +3,18 @@
 import NextError from "next/error";
 import { useEffect } from "react";
 
+<<<<<<< HEAD
 export default function GlobalError({
   error,
 }: {
   error: Error & { digest?: string };
 }) {
   useEffect(() => {}, [error]);
+=======
+export default function GlobalError({ error }: { error: Error & { digest?: string } }) {
+  useEffect(() => {
+  }, [error]);
+>>>>>>> ba69781707a4c6eb9ffdc166390e5f3c1ebf08f1
 
   return (
     <html>

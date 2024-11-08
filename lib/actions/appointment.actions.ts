@@ -3,13 +3,9 @@
 import { ID, Query } from "node-appwrite";
 import {
   APPOINTMENT_COLLECTION_ID,
-  BUCKET_ID,
   DATABASE_ID,
   databases,
-  ENDPOINT,
   messaging,
-  PATIENT_COLLECTION_ID,
-  PROJECT_ID,
 } from "../appwrite.config";
 import { formatDateTime, parseStringify } from "../utils";
 import { Appointment } from "@/types/appwrite.types";

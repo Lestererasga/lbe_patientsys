@@ -3,11 +3,10 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-import { Button } from "@/components/ui/button";
 import { Form } from "@/components/ui/form";
 import CustomFormField, { FormFieldType } from "../CustomFormField";
 import SubmitButton from "../SubmitButton";
-import { use, useState } from "react";
+import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { getAppointmentSchema } from "@/lib/validation";
 import {
@@ -17,7 +16,6 @@ import {
 import { SelectItem } from "../ui/select";
 import Image from "next/image";
 import { Doctors } from "@/constant";
-import { scheduler } from "timers/promises";
 import { Appointment } from "@/types/appwrite.types";
 
 const AppointmentForm = ({
@@ -100,6 +98,8 @@ const AppointmentForm = ({
           },
           type,
         };
+
+        // @ts-ignore
         const updatedAppointment = await updateAppointment(appointmentToUpdate);
 
         if (updatedAppointment) {
